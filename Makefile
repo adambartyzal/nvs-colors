@@ -9,7 +9,6 @@ main.elf: main.o
 	$(ARMGNU)-ld -Ttext 0x8000000 main.o -o main.elf
    
 main.bin: main.elf   
-	rm main.elf main.o main.bin
 	$(ARMGNU)-objcopy -S -O binary main.elf main.bin
 	$(ARMGNU)-size main.elf
    

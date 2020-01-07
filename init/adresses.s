@@ -4,7 +4,7 @@
 .equ AHB2PERIPH_BASE,		    (PERIPH_BASE + 0x08000000)
 
 .equ RCC_BASE,              (AHBPERIPH_BASE + 0x00001000)
-.equ RCC_APB2ENR,           (RCC_BASE + 0x14)
+.equ RCC_AHBENR,            (RCC_BASE + 0x14)
 .equ RCC_APB1ENR,           (RCC_BASE + 0x1C)
 
 .equ TIM6_BASE,             (PERIPH_BASE + 0x1000)
@@ -29,6 +29,15 @@
 .equ EXTI_FTSR,             (EXTI_BASE + 0x0C)
 .equ EXTI_SWIER,            (EXTI_BASE + 0x10)
 .equ EXTI_PR,               (EXTI_BASE + 0x14)
+
+.equ SPI1_BASE,             (SYSCFG_BASE + 0x3000)
+.equ SPI1_CR1,              (SPI1_BASE + 0x00)
+.equ SPI1_CR2,              (SPI1_BASE + 0x04)
+.equ SPI1_SR,               (SPI1_BASE + 0x08)
+.equ SPI1_DR,               (SPI1_BASE + 0x0C)
+.equ SPI1_CRCPR,            (SPI1_BASE + 0x10)
+.equ SPI1_RXCRCR,           (SPI1_BASE + 0x14)
+.equ SPI1_TXCRCR,           (SPI1_BASE + 0x10)
 
 .equ USART2_BASE,           (PERIPH_BASE + 0x00004400)
 .equ USART2_CR1,            (USART2_BASE + 0x00)
@@ -80,6 +89,14 @@
 .equ GPIOC_AFRL, 			      (GPIOC_BASE + 0x20)
 .equ GPIOC_AFRH, 			      (GPIOC_BASE + 0x24)
 .equ GPIOC_BRR, 			      (GPIOC_BASE + 0x28)
+
+.equ DMA_BASE,              (PERIPH_BASE + 0x00020000)
+.equ DMA_ISR,               (DMA_BASE + 0x00)
+.equ DMA_IFCR,              (DMA_BASE + 0x04)
+.equ DMA_CCR4,              (DMA_BASE + 0x44)
+.equ DMA_CNDTR4,            (DMA_BASE + 0x48)
+.equ DMA_CPAR4,             (DMA_BASE + 0x4C)
+.equ DMA_CMAR4,             (DMA_BASE + 0x50)
 
 .equ STK_BASE,	            (0xE000E010)
 .equ STK_CSR,		            (STK_BASE + 0x0)
