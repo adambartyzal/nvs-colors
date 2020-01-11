@@ -13,14 +13,13 @@ _start:                                 @ Start Request Handler
 
 loop:
 
-  @ enable dma
-  ldr		r0, = DMA_CCR4
-  ldr		r1, [r0]
-  ldr		r2, = 1
-  orr		r1, r1, r2
-  str		r1, [r0]
+  ldr		r0, = SPI1_DR
 
-  bl    wait
+  @ldr		r0, = SPI1_DR
+  @ldr		r1, = 0b010000011  
+  @str		r1, [r0]
+
+  @bl    wait
 
 b loop
 
@@ -32,6 +31,7 @@ b loop
 
 .ltorg @ Directive to move literal pool here
 .include "functions/wait.s"
+.include "functions/putchar.s"
 
 @ Interrupt Request Handlers
 
